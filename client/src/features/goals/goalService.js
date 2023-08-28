@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'https://goal-setter-api-two.vercel.app';
+const BASE_URL = 'https://goal-setter-api-taupe.vercel.app';
 const API_URL = '/api/goals';
 
 const URL = BASE_URL + API_URL;

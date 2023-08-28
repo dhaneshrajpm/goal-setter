@@ -12,7 +12,9 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
-app.use(cors());
+app.use(cors({
+  origin: "https://goal-setter-opal.vercel.app"
+}));
 
 app.use('/api/goals', require('./src/routes/goalRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
