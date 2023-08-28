@@ -8,10 +8,11 @@ const port = process.env.port || 5000;
 connectDB();
 
 const app = express();
-app.use(cors())
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
+
+app.use(cors());
 
 app.use('/api/goals', require('./src/routes/goalRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
