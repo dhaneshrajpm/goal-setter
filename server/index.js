@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors({
-  origin: ["https://goal-setter-opal.vercel.app"],
+  origin: ["https://goal-setter-opal.vercel.app", "https://goal-setter-dhaneshrajpm.vercel.app"],
   credentials: true
 }));
 
