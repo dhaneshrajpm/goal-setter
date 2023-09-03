@@ -15,21 +15,21 @@ function Dashboard() {
 
   useEffect(() => {
     if(!user) {
-      navigate('/login')
+      navigate('/login');
+    } else {
+      dispatch(getGoals())
     }
+  }, [user, navigate, dispatch])
 
+  useEffect(() => {
     if(isError) {
       toast.error(message);
-    }
-
-    if (user) {
-      dispatch(getGoals());
     }
 
     return () => {
       dispatch(reset());
     }
-  }, [user, isError, message, navigate, dispatch]);
+  }, [isError, message, navigate, dispatch]);
 
   if (isLoading) {
     return (

@@ -3,7 +3,7 @@ import axios from 'axios'
 const BASE_URL = 'https://goal-setter-api-taupe.vercel.app';
 const API_URL = '/api/users'
 
-const URL = BASE_URL + API_URL;
+const URL = process.env.NODE_ENV === 'production' ? BASE_URL + API_URL : API_URL;
 
 // Register user
 const registerApi = async (userData) => {
